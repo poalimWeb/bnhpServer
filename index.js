@@ -21,6 +21,11 @@ app.get('/transactions/', (req, res) => {
     res.send({version: 2});
 });
 
+app.get('/userData/',(req, res) =>{
+    console.log('retreving UserName Data....');
+    res.send({userName: 'Shahaf Shuhamy'});
+ });
+
 app.listen(port,() => {
     console.log('listenning on port ',port);
 });
