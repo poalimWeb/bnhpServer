@@ -1,0 +1,27 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\INTERNET\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.6.0
+3 info using node@v10.15.0
+4 verbose stack Error: Cannot find module 'internal/util/types'
+4 verbose stack     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:581:15)
+4 verbose stack     at Function.Module._load (internal/modules/cjs/loader.js:507:25)
+4 verbose stack     at Module.require (internal/modules/cjs/loader.js:637:17)
+4 verbose stack     at require (internal/modules/cjs/helpers.js:22:18)
+4 verbose stack     at evalmachine.<anonymous>:44:31
+4 verbose stack     at Object.<anonymous> (C:\Users\INTERNET\AppData\Roaming\npm\node_modules\npm\node_modules\cmd-shim\node_modules\graceful-fs\fs.js:11:1)
+4 verbose stack     at Module._compile (internal/modules/cjs/loader.js:689:30)
+4 verbose stack     at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)
+4 verbose stack     at Module.load (internal/modules/cjs/loader.js:599:32)
+4 verbose stack     at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
+5 verbose cwd C:\Users\INTERNET\Desktop\bnhpTweek\bnhpServer
+6 error Windows_NT 6.1.7601
+7 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\INTERNET\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "install"
+8 error node v10.15.0
+9 error npm  v3.6.0
+10 error code MODULE_NOT_FOUND
+11 error Cannot find module 'internal/util/types'
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]
