@@ -12,7 +12,6 @@ app.use( (req, res, next) => {
 
 app.get('/credit/',(req, res) =>{
    console.log('Checking from what group user belongs and sending Response with version for Credit Feature....');
-   console.log(req.query.userName);
    res.send({version: 2});
 });
 
@@ -25,6 +24,11 @@ app.get('/userData/',(req, res) =>{
     console.log('retreving UserName Data....');
     res.send({userName: 'Shahaf Shuhamy'});
  });
+
+ app.get('/bnhpApp/', (req, res) => {
+     console.log('returnning Entire Keys set');
+     res.send({credit: 1, home: 2, feature_flag: 1 })
+ })
 
 app.listen(port,() => {
     console.log('listenning on port ',port);
