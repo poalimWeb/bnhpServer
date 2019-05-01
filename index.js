@@ -1,4 +1,5 @@
 var express = require('express');
+var keys = require('./keys');
 var app = express();
 const port = process.env.PORT || 8080;
 
@@ -10,7 +11,9 @@ app.use( (req, res, next) => {
     next();
 });
 
-app.get('/credit/',(req, res) =>{
+app.get('/credit/', () => {
+    next()
+}, (req, res) =>{
    console.log('Checking from what group user belongs and sending Response with version for Credit Feature....');
    res.send({version: 2});
 });
@@ -20,14 +23,19 @@ app.get('/transactions/', (req, res) => {
     res.send({version: 2});
 });
 
+app.get('/current-account/', (req, res) => {
+    console.log('current-account version key');
+    res.send({version: keys.currentAccount});
+});
+
 app.get('/userData/',(req, res) =>{
     console.log('retreving UserName Data....');
     res.send({userName: 'Shahaf Shuhamy'});
  });
 
- app.get('/bnhpApp/', (req, res) => {
-     console.log('returnning Entire Keys set');
-     res.send({credit: 1, home: 2, feature_flag: 1 })
+ app.get('/home/', (req, res) => {
+     console.log('home version key');
+     res.send({version: keys.home})
  })
 
 app.listen(port,() => {
